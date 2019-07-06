@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import '../assets/style.scss';
 import '../test/style.scss';
+import '../test/regular_css.css'
 // import Icon from '../components/icon.png';
 // import Data from '../components/data.xml';
 
