@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import './style.css';
-import Icon from './icon.png';
-import Data from './data.xml';
+// import '../assets/style.css';
+// import Icon from '../components/icon.png';
+// import Data from '../components/data.xml';
 
 
 function component() {
@@ -11,12 +11,12 @@ function component() {
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     element.classList.add('hello')
 
-    const myIcon = new Image();
-    myIcon.src = Icon;
+    // const myIcon = new Image();
+    // myIcon.src = Icon;
 
-    element.appendChild(myIcon);
+    // element.appendChild(myIcon);
 
-    console.log(Data)
+    // console.log(Data)
 
     return element;
 }
