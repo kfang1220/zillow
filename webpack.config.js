@@ -5,11 +5,11 @@ const globalBundleID = uuid();
 
 module.exports = {
     mode: 'development',
-    resolve: { extensions: ['.js', '.jsx', '.json'] },
+    resolve: { extensions: ['.js', '.jsx', '.json', '.es6'] },
     entry: './src/index.js',
     output: {
         filename: 'bundle' + globalBundleID + '.js',
-        path: __dirname,
+        path: path.resolve(__dirname)
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -19,6 +19,14 @@ module.exports = {
     ],
     module: {
         rules: [{
+                test: /\.css$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                ]
+            },
+            {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {

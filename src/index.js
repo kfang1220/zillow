@@ -1,5 +1,5 @@
 import _ from 'lodash';
-// import '../assets/style.css';
+import '../assets/style.css';
 // import Icon from '../components/icon.png';
 // import Data from '../components/data.xml';
 
