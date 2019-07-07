@@ -1,30 +1,28 @@
 import _ from 'lodash';
-import '../assets/style.scss';
+import './assets/style.scss';
 import '../test/style.scss';
 import '../test/regular_css.css'
-// import Icon from '../components/icon.png';
-// import Data from '../components/data.xml';
+import Icon from './assets/images/test.png';
+import Data from './assets/data.xml';
 
 
 function component() {
     const element = document.createElement('div');
-    const element2 = document.createElement('div');
 
     // Lodash, currently included via a script, is required for this line to work
-    //element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     element.classList.add('mod1')
 
-    element.innerHTML = _.join(["I am testing css joining"], ' ')
+    const myIcon = new Image();
+    myIcon.src = Icon;
+
+    console.log(myIcon)
+
+    element.appendChild(myIcon);
+
     element.classList.add('mod2')
 
-
-
-    // const myIcon = new Image();
-    // myIcon.src = Icon;
-
-    // element.appendChild(myIcon);
-
-    // console.log(Data)
+    console.log(Data)
 
     return element;
 }
