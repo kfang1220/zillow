@@ -20,18 +20,23 @@ module.exports = {
         contentBase: "dist"
     },
     plugins: [
+        // Generates a new html file, template is used for replicating a specific html format/elements
         new HtmlWebpackPlugin({
             title: 'Zillow Photo Gallery',
             filename: './dist/index.html',
             // path: path.resolve(__dirname),
             // template: './src/index.html'
         }),
+        // gets css files and bundles into a single file with hash
         new MiniCssExtractPlugin({
             filename: "./dist/style.[hash].css"
                 //filename: "./dist/style__" + globalBundleID + ".css"
         }),
+
+        // To do: makes development easier by avoiding new bundle files when using hash
         // new CleanWebpackPlugin()
 
+        // Alternative to file/img uploading
         // new CopyWebpackPlugin([
         //     { from: 'src/assets/images', to: './dist/images' }
         // ]),
@@ -117,12 +122,16 @@ module.exports = {
                 test: /\.svg$/,
                 loader: 'svg-url-loader',
                 options: {
-                    // Images larger than 10 KB won’t be inlined
-                    limit: 10 * 1024,
+                    // Images larger than 1000 KB won’t be inlined
+                    limit: 1000 * 1024,
                     // Remove quotes around the encoded URL –
                     // they’re rarely useful
                     noquotes: true,
                 }
+            },
+            {
+                test: /\.svg$/,
+                loader: "svg-url-loader?limit=10000&mimetype=image/svg+xml"
             }
         ]
     }
