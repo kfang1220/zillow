@@ -4,6 +4,7 @@ import '../test/style.scss';
 import '../test/regular_css.css'
 import Icon from './assets/images/test.png';
 import Data from './assets/data.xml';
+// import Logo from './assets/images/logo.svg'
 
 
 function component() {
@@ -14,16 +15,14 @@ function component() {
     element.classList.add('mod1')
 
     const myIcon = new Image();
+    const myLogo = new Logo();
     myIcon.src = Icon;
+    // myLogo.src = Logo;
 
-    console.log(myIcon)
 
     element.appendChild(myIcon);
 
     element.classList.add('mod2')
-
-    console.log(Data)
-
     return element;
 }
 
