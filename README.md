@@ -1,7 +1,7 @@
 #Zillow WebPack Task
 A webpack config that generates html,hashedBundle, hashedCss, and image folder.
 
-#Usage
+##Usage
 npm install
 npm run build
 npm run start, when you build 
