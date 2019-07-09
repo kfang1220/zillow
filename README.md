@@ -1,12 +1,18 @@
-# Zillow WebPack Task
-A webpack config that generates html,hashedBundle, hashedCss, and image folder.
+#Z illow WebPack Setup
 
-## Usage
+## What this repo does
+Creates a new directory with the following:
+Generates dynamic HTML file
+Bundles JS/CSS files and injects into HTML
+Handles images and files and creates references
+
+## Testing
+Fork/Clone
 npm install
+delete any dist/image folders in root directory
 npm run build
-npm run start, when you build 
-to run again, delete the dist folder that has dynamically generated files/folders
+start a server and the html page should be generated with appropriate files
 
-### ToDo 
-Add other methods of testing for SVG
-Add dev package to avoid recreating bundles every time
+## ToDo
+Find a way to avoid recreating bundle/css/html files in development
+Test SVG

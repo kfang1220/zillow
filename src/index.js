@@ -2,9 +2,9 @@ import _ from 'lodash';
 import './assets/style.scss';
 import '../test/style.scss';
 import '../test/regular_css.css'
-import Icon from './assets/images/test.png';
+import Icon from './assets/images/icon.png';
 import Data from './assets/data.xml';
-// import Logo from './assets/images/logo.svg'
+
 
 
 function component() {
@@ -15,10 +15,8 @@ function component() {
     element.classList.add('mod1')
 
     const myIcon = new Image();
-    const myLogo = new Logo();
+    console.log('test')
     myIcon.src = Icon;
-    // myLogo.src = Logo;
-
 
     element.appendChild(myIcon);
 

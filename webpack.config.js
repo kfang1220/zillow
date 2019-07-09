@@ -17,13 +17,13 @@ module.exports = {
         path: path.resolve(__dirname),
     },
     devServer: {
-        contentBase: "dist"
+        contentBase: "/"
     },
     plugins: [
         // Generates a new html file, template is used for replicating a specific html format/elements
         new HtmlWebpackPlugin({
             title: 'Zillow Photo Gallery',
-            filename: './dist/index.html',
+            filename: './index.html',
             // path: path.resolve(__dirname),
             // template: './src/index.html'
         }),
